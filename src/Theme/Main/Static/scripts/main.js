@@ -1,0 +1,4 @@
+/**
+ * Theme Main JS
+ *
+ */

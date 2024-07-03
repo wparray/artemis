@@ -1,0 +1,33 @@
+{
+	"name": "wparray/artemiss",
+	"description": "ThemeKit is the simplest WordPress starter theme including full setup for Sass, PostCSS, Autoprefixer, stylelint, Webpack, ESLint, imagemin, Browsersync, etc.",
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"Artemis\\Core\\": "src/Core",
+			"Artemis\\Setup\\": "src/Setup",
+			"Artemis\\Utils\\": "src/Utils",
+			"Artemis\\Blocks\\": "src/Theme/Blocks/Controllers",
+			"Artemis\\Page\\": "src/Theme/Page/Controllers"
+		}
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.3"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
+			"phpcs --config-set default_standard WordPress"
+		],
+		"test": [
+			"phpcs --extensions=php --ignore=./vendor,./node_modules,./.yarn ./"
+		],
+		"fix": [
+			"phpcbf --extensions=php --ignore=./vendor,./node_modules,./.yarn ./"
+		]
+	},
+	"require": {
+		"laravel/pint": "^1.16",
+		"htmlburger/carbon-fields": "^3.6"
+	}
+}

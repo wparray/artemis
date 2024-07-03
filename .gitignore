@@ -1,0 +1,31 @@
+# Dev Packages
+/node_modules
+/vendor
+
+# Yarn Zero-Installs
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Output files
+/build
+
+# Other unneeded files
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.nova
+.secret
+mix-manifest.json
+.npmrc
+.yarnrc
+.editorconfig
+.yarn
+.vscode

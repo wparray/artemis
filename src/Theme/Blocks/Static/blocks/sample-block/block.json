@@ -1,0 +1,21 @@
+{
+	"name": "artemis/sample",
+	"title": "Sample Block",
+	"description": "A custom testimonial block that uses ACF fields.",
+	"style": [
+		"file:./testimonial.css"
+	],
+	"category": "formatting",
+	"icon": "admin-comments",
+	"keywords": [
+		"testimonial",
+		"quote"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "sample-block.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}
