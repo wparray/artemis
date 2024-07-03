@@ -48,34 +48,14 @@ class Helpers {
 	 * $layout_content will be parsed inside the layout template.
 	 *
 	 * @param  string $layout_name The layout name.
-	 * @param  callable $layout_content The layout content.
 	 * @param  array  $layout_args The layout args.
 	 * @see  Kit::layout();
 	 * @since  1.0.0
 	 * @return void
 	 */
 	public static function layout( $layout_name, $layout_content, $layout_args = array() ) {
-		// Ensure the layout file exists before including it.
-		$file_path = get_template_directory() . "/src/Theme/Layouts/Static/$layout_name.php";
 
-		if ( file_exists( $file_path ) ) {
-			// Make $layout_args available within the layout file.
-			extract( $layout_args );
-
-			// Include the layout file.
-			require $file_path;
-
-			// Check if $layout_content is callable and then call it.
-			if ( is_callable( $layout_content ) ) {
-				call_user_func( $layout_content, $layout_args );
-			} else {
-				// Handle the case where $layout_content is not callable.
-				echo $layout_content;
-			}
-		} else {
-			// Handle the case where the layout file does not exist.
-			echo "Layout file not found: $layout_name";
-		}
+		require \get_template_directory() . "/src/Theme/Layouts/Static/$layout_name.php";
 
 	}
 

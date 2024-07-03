@@ -21,16 +21,13 @@ Kit::layout(
 	function () {
 		?>
 
-	<div class="flex flex-col gap-2 text-center">
+	<div class="flex flex-col gap-3 text-center">
 
-		<h1 class="text-5xl font-semibold tracking-[-0.015em] text-gray-900">
-			<?php esc_html_e( 'Ready to start.', 'artemis' ); ?>
-		</h1>
+		<?php the_content(); ?>
 
 	</div>
 
 	<?php
-
 
 	}
 );
